@@ -6,4 +6,5 @@ from leads.views import lead_list
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('leads/', include('leads.urls', namespace="leads")),
+    
 ]
