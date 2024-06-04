@@ -1,6 +1,7 @@
 from django.shortcuts import render
 from django.http import HttpResponse
 from .models import Lead
+from .forms import LeadForm
 
 def lead_list(request):
     leads = Lead.objects.all()
@@ -17,4 +18,11 @@ def lead_detail(request, pk):
     return render(request, "leads/lead_detail.html", context)
 
 def lead_create(request):
-    return render(request, "leads/lead_create.html")
+    form = LeadForm()
+    if request.method == "POST":
+        print('Receiving a post request')
+        form = LeadForm(request.POST)
+    context = {
+        "form": form,
+        }
+    return render(request, "leads/lead_create.html",context)
