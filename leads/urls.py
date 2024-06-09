@@ -8,5 +8,4 @@ urlpatterns = [
     path('<int:pk>/', lead_detail),
     path('<int:pk>/update/', lead_update),
     path('create/', lead_create),
-    
 ]
