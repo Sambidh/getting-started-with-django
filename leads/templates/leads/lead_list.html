@@ -25,7 +25,7 @@
 
     {% for lead in leads %}
     <div class="leads">
-      <a href="/leads/{{ lead.pk }}/"
+      <a href="{% url 'leads:lead-detail' lead.pk %} "
         >{{ lead.first_name }} {{ lead.last_name }}.</a
       >
       Age: {{ lead.age }}
