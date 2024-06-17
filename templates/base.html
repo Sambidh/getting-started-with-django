@@ -4,19 +4,15 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>DJCRM</title>
-    <style>
-      .leads {
-        padding-top: 10px;
-        padding-bottom: 10px;
-        padding-left: 6px;
-        padding-right: 6px;
-        margin: 10px;
-        background-color: #f6f6f6;
-        width: 100%;
-      }
-    </style>
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css"
+    />
   </head>
   <body>
-    {% block content %} {% endblock content %} {% include "scripts.html" %}
+    <div class="max-w-4xl max-auto bg-gray-100">
+      {% block content %} {% endblock content %}
+    </div>
+    {% include "scripts.html" %}
   </body>
 </html>
