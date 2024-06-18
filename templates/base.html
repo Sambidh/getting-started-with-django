@@ -10,8 +10,8 @@
     />
   </head>
   <body>
-    <div class="max-w-4xl max-auto bg-gray-100">
-      {% block content %} {% endblock content %}
+    <div class="max-w-7xl mx-auto">
+      {% include 'navbar.html' %} {% block content %} {% endblock content %}
     </div>
     {% include "scripts.html" %}
   </body>
